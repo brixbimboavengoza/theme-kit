@@ -1,18 +1,16 @@
 import React from 'react';
-import {  Meta, StoryFn } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import CustomButton from './CustomButton';
+import { ButtonProps } from '@chakra-ui/react';
 
-export default {
-  title: 'YourPackageName/CustomButton',
+export const meta: Meta<ButtonProps> = {
+  title: 'nodies-theme-kit/CustomButton',
   component: CustomButton,
-} as Meta;
+};
 
-const Template: StoryFn = (args) => <CustomButton {...args} />;
+const Template: StoryFn<ButtonProps> = (args) => <CustomButton {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  // Props to pass to the CustomButton
-  children: 'Click Me',
+  children: 'Click Here',
 };
-
-// Add more variations of your component here
