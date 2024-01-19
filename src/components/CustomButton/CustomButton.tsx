@@ -4,7 +4,7 @@ import React from 'react'
 export default function CustomButton() {
   return (
 	<Button variant="outline" bgColor="red">
-    Custom Button
+    Custom Test
   </Button>
   )
 }
