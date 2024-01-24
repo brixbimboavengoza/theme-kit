@@ -1,19 +1,29 @@
-import { defineStyle, defineStyleConfig, extendTheme } from '@chakra-ui/react';
+import type { ComponentStyleConfig } from '@chakra-ui/react';
 
-const buttonTheme = defineStyleConfig({
+export const Button: ComponentStyleConfig = {
+  baseStyle: {
+    fontFamily: 'Poppins',
+    fontSize: '16px',
+    fontWeight: '500',
+    letterSpacing: '0',
+    width: 'fit-content',
+    _disabled: {
+      opacity: 1,
+    },
+  },
   variants: {
     primary: {
       borderRadius: '8px',
-      bgColor: '#7D69F4',
+      bgColor: 'Purple.3',
       color: 'White',
       _hover: {
-        bgColor: '#9A77FF',
+        bgColor: 'Purple.1',
       },
       _focus: {
-        bgColor: '#5C59C5',
+        bgColor: 'BluePurple.1',
       },
       _disabled: {
-        bgColor: '#D2D5EB',
+        bgColor: 'Gray.1',
         color: 'White',
         pointerEvents: 'none',
       },
@@ -21,32 +31,33 @@ const buttonTheme = defineStyleConfig({
     secondary: {
       borderRadius: '8px',
       borderWidth: 1,
-      borderColor: '#D2D5EB',
+      borderColor: 'Gray.1',
       bgColor: 'White',
       color: 'Black',
       _hover: {
-        bgColor: '#F3F4FD',
+        bgColor: 'Gray.3',
       },
       _focus: {
-        bgColor: '#E9EBFF',
+        bgColor: 'Gray.2',
       },
       _disabled: {
-        color: '#D2D5EB',
+        color: 'Gray.1',
       },
     },
     tertiary: {
+      fontFamily: 'Poppins',
       borderRadius: '8px',
-      bgColor: '#67F6C3',
+      bgColor: 'MintGreen.1',
       fontWeight: 500,
-      color: '#211C2B',
+      color: 'Black.1',
       _hover: {
-        bgColor: '#8BFFD5',
+        bgColor: 'MintGreen.2',
       },
       _focus: {
-        bgColor: '#25EDB1',
+        bgColor: 'MintGreen.3',
       },
       _disabled: {
-        bgColor: '#D2D5EB',
+        bgColor: 'Gray.1',
         color: 'White',
         pointerEvents: 'none',
       },
@@ -55,42 +66,42 @@ const buttonTheme = defineStyleConfig({
       color: 'Black',
       _hover: {
         textDecoration: 'none',
-        color: '#7D69F4',
+        color: 'Purple.3',
       },
       _disabled: {
-        color: '#D2D5EB',
+        color: 'Gray.1',
       },
     },
     unstyled_primary: {
       color: 'Black',
       _hover: {
         textDecoration: 'none',
-        color: '#7D69F4',
+        color: 'Purple.3',
       },
       _disabled: {
-        color: '#D2D5EB',
+        color: 'Gray.1',
       },
     },
     unstyled_tertiary: {
-      color: '#8BFFD5',
+      color: 'MintGreen.2',
       padding: 0,
       _hover: {
         textDecoration: 'none',
       },
       _disabled: {
-        color: '#D2D5EB',
+        color: 'Gray.1',
       },
     },
     link_primary: {
       fontFamily: 'Roboto',
-      color: '#7D69F4',
+      color: 'Purple.3',
       padding: 0,
       _hover: {
         textDecoration: 'none',
         fontWeight: '700',
       },
       _disabled: {
-        color: '#D2D5EB',
+        color: 'Gray.1',
       },
     },
     link_secondary: {
@@ -102,7 +113,7 @@ const buttonTheme = defineStyleConfig({
         fontWeight: '700',
       },
       _disabled: {
-        color: '#D2D5EB',
+        color: 'Gray.1',
       },
     },
     link_tertiary: {
@@ -114,11 +125,11 @@ const buttonTheme = defineStyleConfig({
         fontWeight: '700',
       },
       _disabled: {
-        color: '#D2D5EB',
+        color: 'Gray.1',
       },
     },
     tab_selected: {
-      color: '#7D69F4',
+      color: 'Purple.3',
       _hover: {
         bg: 'rgb(125 105 244 / 15%)',
       },
@@ -136,7 +147,7 @@ const buttonTheme = defineStyleConfig({
       height: '40px',
       width: '40px',
       color: 'white',
-      bgColor: '#7D69F4',
+      bgColor: 'Purple.3',
       justifyContent: 'center',
       _hover: {
         bgColor: 'Purple.4',
@@ -153,10 +164,10 @@ const buttonTheme = defineStyleConfig({
       borderRadius: 'full',
       height: '40px',
       width: '40px',
-      bgColor: '#F3F4FD',
+      bgColor: 'Gray.3',
       color: 'Black',
       _hover: {
-        bgColor: '#E9EBFF',
+        bgColor: 'Gray.2',
       },
     },
     round_button_light: {
@@ -166,13 +177,13 @@ const buttonTheme = defineStyleConfig({
       color: 'Gray.7',
       bgColor: 'transparent',
       _hover: {
-        bgColor: '#F3F4FD',
+        bgColor: 'Gray.3',
       },
       _focus: {
-        bgColor: '#E9EBFF',
+        bgColor: 'Gray.2',
       },
       _disabled: {
-        color: '#E9EBFF',
+        color: 'Gray.2',
         bgColor: 'transparent',
       },
     },
@@ -190,7 +201,7 @@ const buttonTheme = defineStyleConfig({
     },
     social_button: {
       borderWidth: 1,
-      borderColor: '#D2D5EB',
+      borderColor: 'Gray.1',
       height: '50px',
       size: 'lg',
       width: '100%',
@@ -198,7 +209,7 @@ const buttonTheme = defineStyleConfig({
       fontSize: 'md',
       fontWeight: 400,
       _hover: {
-        bgColor: '#F3F4FD',
+        bgColor: 'Gray.3',
       },
       _disabled: {
         filter: 'grayscale(90%)',
@@ -219,7 +230,7 @@ const buttonTheme = defineStyleConfig({
         bgColor: 'rgba(151, 158, 216, 0.2)',
       },
       _disabled: {
-        color: '#D2D5EB',
+        color: 'Gray.1',
       },
     },
     outline_button: {
@@ -230,10 +241,23 @@ const buttonTheme = defineStyleConfig({
       color: '#070014',
     },
   },
-});
-
-const customTheme = extendTheme({
-  components: { Button: buttonTheme },
-});
-
-export default customTheme;
+  sizes: {
+    xs: {
+      height: '32px',
+    },
+    sm: {
+      height: '40px',
+      paddingX: '2rem',
+    },
+    md: {
+      height: '48px',
+      paddingY: '1.425rem',
+    },
+    lg: {
+      height: '56px',
+      borderRadius: '8px',
+      padding: '1.6rem 2rem',
+    },
+  },
+  defaultProps: {},
+};
