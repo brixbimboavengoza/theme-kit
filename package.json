@@ -2,7 +2,7 @@
   "name": "@brixbimboavengoza/nodies-theme-kit",
   "version": "1.1.0",
   "description": "A theme kit for nodies",
-  "main": "dist/index.js",
+  "main": "./dist/index.js",
   "author": "reapvader",
   "license": "MIT",
   "publishConfig": {
@@ -15,10 +15,7 @@
     "framer-motion": "^10.17.9",
     "react-icons": "^4.12.0"
   },
-  "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
+  "peerDependencies": {},
   "devDependencies": {
     "@storybook/addon-essentials": "^7.6.7",
     "@storybook/addon-interactions": "^7.6.7",
@@ -30,11 +27,16 @@
     "@storybook/test": "^7.6.7",
     "@types/react": "^18.2.47",
     "@types/react-dom": "^18.2.18",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "storybook": "^7.6.7",
-    "typescript": "^5.3.3"
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.3.3",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "webpack --mode development",
     "tsc:init": "tsc --init",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
